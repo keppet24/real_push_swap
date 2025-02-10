@@ -6,7 +6,7 @@
 /*   By: taqi <taqi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 15:24:26 by othmaneetta       #+#    #+#             */
-/*   Updated: 2025/02/10 18:02:39 by taqi             ###   ########.fr       */
+/*   Updated: 2025/02/10 18:06:45 by taqi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	sort(t_a **s1, t_b **s2)
 
 	size = size_of_stack_a(s1);
 	if (size <= 5 && !is_sorted(s1))
-	{	
+	{
 		small_sort(s1, s2);
 	}
 	else

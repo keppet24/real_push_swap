@@ -6,7 +6,7 @@
 /*   By: taqi <taqi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:25:46 by othmaneetta       #+#    #+#             */
-/*   Updated: 2025/02/10 18:03:04 by taqi             ###   ########.fr       */
+/*   Updated: 2025/02/10 18:06:55 by taqi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,7 @@ int		size_of_stack_b(t_b **s1);
 void	free_tab(char **tab, int j);
 void	push_min(t_a **s1, t_b **s2, int i);
 void	sa(t_a **stack);
-int	is_sorted(t_a **s1);
-int	is_sorted_radix(t_a **s1);
-
+int		is_sorted(t_a **s1);
+int		is_sorted_radix(t_a **s1);
 
 #endif

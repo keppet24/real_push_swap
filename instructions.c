@@ -6,7 +6,7 @@
 /*   By: taqi <taqi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 14:40:13 by othmaneetta       #+#    #+#             */
-/*   Updated: 2025/02/10 17:40:02 by taqi             ###   ########.fr       */
+/*   Updated: 2025/02/10 18:07:17 by taqi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,7 @@ void	sa(t_a **stack)
 	t_a	*second;
 
 	if (!stack || !*stack || !(*stack)->next)
-		return;
-
+		return ;
 	first = *stack;
 	second = first->next;
 	first->next = second->next;

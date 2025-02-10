@@ -6,7 +6,7 @@
 /*   By: taqi <taqi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 14:49:03 by othmaneetta       #+#    #+#             */
-/*   Updated: 2025/02/10 17:59:14 by taqi             ###   ########.fr       */
+/*   Updated: 2025/02/10 18:06:11 by taqi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,5 @@ int	main(int ac, char **av)
 	}
 	parsing(ac, av, &s1);
 	sort(&s1, &s2);
-	// while (s1)
-	// {
-	// 	printf("%d\n", s1->value);
-	// 	s1 = s1->next;
-	// }
 	free_all_stack(&s1, &s2);
 }
