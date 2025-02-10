@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   instructions.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oettaqi <oettaqi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: taqi <taqi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 14:40:13 by othmaneetta       #+#    #+#             */
-/*   Updated: 2025/02/07 18:31:09 by oettaqi          ###   ########.fr       */
+/*   Updated: 2025/02/10 17:40:02 by taqi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,22 @@ void	pa(t_a **s1, t_b **s2)
 	top->next = (t_b *)temp;
 	write(1, "pa\n", 3);
 }
+
+void	sa(t_a **stack)
+{
+	t_a	*first;
+	t_a	*second;
+
+	if (!stack || !*stack || !(*stack)->next)
+		return;
+
+	first = *stack;
+	second = first->next;
+	first->next = second->next;
+	second->next = first;
+	*stack = second;
+	write(1, "sa\n", 3);
+}
+
 	//printf("pa");
 	//top->value = top->value_normalized;

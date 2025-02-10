@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oettaqi <oettaqi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: taqi <taqi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 14:49:03 by othmaneetta       #+#    #+#             */
-/*   Updated: 2025/02/07 18:30:57 by oettaqi          ###   ########.fr       */
+/*   Updated: 2025/02/10 17:59:14 by taqi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,17 @@ int	main(int ac, char **av)
 
 	s1 = NULL;
 	s2 = NULL;
+	if (ac == 1)
+	{
+		write(2, "Error\n", 6);
+		return (0);
+	}
 	parsing(ac, av, &s1);
 	sort(&s1, &s2);
+	// while (s1)
+	// {
+	// 	printf("%d\n", s1->value);
+	// 	s1 = s1->next;
+	// }
 	free_all_stack(&s1, &s2);
 }

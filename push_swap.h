@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oettaqi <oettaqi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: taqi <taqi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:25:46 by othmaneetta       #+#    #+#             */
-/*   Updated: 2025/02/07 18:30:35 by oettaqi          ###   ########.fr       */
+/*   Updated: 2025/02/10 18:03:04 by taqi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	rra(t_a **s1);
 void	pb(t_a **s1, t_b **s2);
 void	ra(t_a **s1);
 void	sort_stack_2(t_a **s1);
-void	sort_stack_3(t_a **s1, t_b **s2);
+void	sort_stack_3(t_a **s1);
 void	sort_stack_4(t_a **s1, t_b **s2);
 void	sort_stack_5(t_a **s1, t_b **s2);
 void	small_sort(t_a **s1, t_b **s2);
@@ -58,5 +58,9 @@ int		size_of_stack_a(t_a **s1);
 int		size_of_stack_b(t_b **s1);
 void	free_tab(char **tab, int j);
 void	push_min(t_a **s1, t_b **s2, int i);
+void	sa(t_a **stack);
+int	is_sorted(t_a **s1);
+int	is_sorted_radix(t_a **s1);
+
 
 #endif

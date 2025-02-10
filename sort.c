@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oettaqi <oettaqi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: taqi <taqi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 15:24:26 by othmaneetta       #+#    #+#             */
-/*   Updated: 2025/02/07 18:30:19 by oettaqi          ###   ########.fr       */
+/*   Updated: 2025/02/10 18:02:39 by taqi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,11 @@ void	radix_sort(t_a **s1, t_b **s2)
 	int	i;
 	int	j;
 	int	size;
-	int	bit_max;
 
 	normalize(s1);
-	bit_max = find_bit_max(s1);
 	size = size_of_stack_a(s1);
 	i = 0;
-	while (i < bit_max)
+	while (!is_sorted_radix(s1))
 	{
 		j = 0;
 		while (j < size)
@@ -88,8 +86,10 @@ void	sort(t_a **s1, t_b **s2)
 	int	size;
 
 	size = size_of_stack_a(s1);
-	if (size <= 5)
+	if (size <= 5 && !is_sorted(s1))
+	{	
 		small_sort(s1, s2);
+	}
 	else
 		radix_sort(s1, s2);
 }

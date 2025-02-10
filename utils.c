@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oettaqi <oettaqi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: taqi <taqi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 14:45:49 by othmaneetta       #+#    #+#             */
-/*   Updated: 2025/02/07 18:30:12 by oettaqi          ###   ########.fr       */
+/*   Updated: 2025/02/10 18:02:33 by taqi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,32 @@ void	push_min(t_a **s1, t_b **s2, int i)
 			ra(s1);
 	}
 	pb(s1, s2);
+}
+
+int	is_sorted_radix(t_a **s1)
+{
+	t_a	*temp;	
+
+	temp = *s1;
+	while (temp && temp->next)
+	{
+		if (temp->value_normalized > temp->next->value_normalized)
+			return (0);
+		temp = temp->next;
+	}
+	return (1);
+}
+
+int	is_sorted(t_a **s1)
+{
+	t_a	*temp;	
+
+	temp = *s1;
+	while (temp && temp->next)
+	{
+		if (temp->value > temp->next->value)
+			return (0);
+		temp = temp->next;
+	}
+	return (1);
 }
